@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo-List</title>
+  <!-- stylesheet link -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Tailwind-UI -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#020a15]">
+  <main>
+    <div
+      class="container max-[760px]:p-[40px_20px_0_20px] m-[15px_auto] flex justify-center flex-col gap-[40px] p-[80px_150px]">
+      <div class="head m-[10px_auto]">
+        <h1 class="text-center  text-5xl font-bold tracking-[5px] ">Todo List</h1>
+      </div>
+
+      <div class="input rounded-2xl border-2 border-solid self-center">
+        <input class="pl-2.5 text-white bg-transparent caret-amber-500" id="taskInput" type="text"
+          placeholder="Enter your task">
+        <button class="btn  text-[papayawhip] p-2.5 rounded-2xl" id="add">Add Task</button>
+      </div>
+      <div class="tasks bg-[#39303b61] text-white p-7 rounded-xl shadow-[0_0_130px_-30px_#ffffff6e] ">
+        <ul id="taskList" class="text-3xl font-normal tracking-wide ">
+
+        </ul>
+      </div>
+    </div>
+
+  </main>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>
