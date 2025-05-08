@@ -119,7 +119,7 @@ const editFN = (container, p) => {
   container.replaceChild(input, p);
   input.focus();
 
-  // عند الخروج من الحقل
+  // when blur
   input.addEventListener("blur", () => {
     const newP = document.createElement("p");
     newP.id = "editableText";
@@ -127,14 +127,14 @@ const editFN = (container, p) => {
     newP.style.cursor = "pointer";
     container.replaceChild(newP, input);
 
-    // إعادة تفعيل الحدث بعد التحويل لـ <p>
+    // return <p>
     newP.addEventListener("click", arguments.callee);
   });
 
-  // عند الضغط على Enter
+  // when Enter
   input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
-      input.blur(); // يحفّز حدث blur
+      input.blur();
     }
   });
 };
